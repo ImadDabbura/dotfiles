@@ -1,2 +1,2 @@
-# dotfiles
+# Dotfiles
 Collection of configuration files.

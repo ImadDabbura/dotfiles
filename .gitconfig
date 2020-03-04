@@ -1,0 +1,51 @@
+
+[alias]
+	a = add
+	s = status -sb
+	c = commit -m
+	p = push origing master
+[help]
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+	tool = code
+[user]
+	name = Imad
+	email = imad.dabbura@hotmail.com
+[color]
+	ui = auto
+	diff = auto
+	interactive = autos
+	branch = auto
+[color "branch"]
+
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+
+	added = yellow
+	changed = green
+	untracked = cyan
+[core]
+	editor = code
+	excludesfile = ~/.gitignore_global
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[alias]
+	graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
+	graph2 = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"

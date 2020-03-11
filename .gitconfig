@@ -1,20 +1,4 @@
 
-[alias]
-	co = checkout
-	cob = checkout -b
-	br = branch
-	brd = branch -d
-	brD = branch -D
-	st = status
-	cm = commit -m
-	cp = cherry-pick
-	amend = commit --amend -m
-	po = push origin
-	pom = push origin master
-	plo = pull origin
-	plom = pull origin master
-	f = "!git ls-files | grep -i"
-	gr = grep -Ii
 [help]
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1

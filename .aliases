@@ -10,7 +10,6 @@ alias gb='git branch'
 alias gbd='git branch -d' 
 alias gco='git checkout'
 alias gcob='git checkout -b'
-unalias gd
 alias gd='git diff'
 alias gD='git ls-files'
 

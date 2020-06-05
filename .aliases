@@ -1,3 +1,7 @@
+## General commands
+alias ls="exa --long"
+alias lt="exa --long --tree"
+
 ## Git
 alias ga='git add'
 alias gc='git commit'

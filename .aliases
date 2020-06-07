@@ -1,6 +1,7 @@
 ## General commands
 alias ls="exa --long"
 alias lt="exa --long --tree"
+alias mux="tmuxinator"
 
 ## Git
 alias ga='git add'

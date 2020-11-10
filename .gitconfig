@@ -6,7 +6,7 @@
 	default = upstream
 [merge]
 	conflictstyle = diff3
-	tool = code
+	tool = vi
 [user]
 	name = Imad
 	email = imad.dabbura@hotmail.com
@@ -34,7 +34,7 @@
 	changed = green
 	untracked = cyan
 [core]
-	editor = code
+	editor = vi
 	excludesfile = ~/.gitignore_global
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f

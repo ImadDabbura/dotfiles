@@ -13,7 +13,7 @@
 [color]
 	ui = auto
 	diff = auto
-	interactive = autos
+	interactive = auto
 	branch = auto
 [color "branch"]
 

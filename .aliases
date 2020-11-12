@@ -3,21 +3,6 @@ alias ls="exa --long"
 alias lt="exa --long --tree"
 alias mux="tmuxinator"
 
-## Git
-alias ga='git add'
-alias gc='git commit'
-alias gs='git status'
-alias gpl='git pull'
-alias gp='git push'
-alias gamend='git commit --amend -m'
-alias gg='git graph'
-alias gb='git branch'
-alias gbd='git branch -d' 
-alias gco='git checkout'
-alias gcob='git checkout -b'
-alias gd='git diff'
-alias gD='git ls-files'
-
 ## Jupyter
 alias jc="jupyter console"
 alias jco="jupyter nbconvert"

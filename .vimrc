@@ -92,3 +92,25 @@ set expandtab
 
 " fugitive commands
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" Autocompletion
+set wildmenu
+set wildmode=full
+
+" History
+set history=200
+
+" Search highlighting
+set hls
+
+" Exclude octal formats
+set nrformats-=octal
+
+" Navigation between buffers
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
+" Expansion of Active File Directory
+cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'

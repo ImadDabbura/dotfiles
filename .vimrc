@@ -1,110 +1,83 @@
-" Comments in Vimscript start with a `"`.
+set nocompatible              " required
+filetype off                  " required
 
-" If you open this file in Vim, it'll be syntax highlighted for you.
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Vim is based on Vi. Setting `nocompatible` switches from the default
-" Vi-compatibility mode and enables useful Vim functionality. This
-" configuration option turns out not to be necessary for the file named
-" '~/.vimrc', because Vim automatically enters nocompatible mode if that file
-" is present. But we're including it here just in case this config file is
-" loaded some other way (e.g. saved as `foo`, and then Vim started with
-" `vim -u foo`).
-set nocompatible
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'dense-analysis/ale'
+Plugin 'nvie/vim-flake8'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-" Turn on syntax highlighting.
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 syntax on
-
-" Disable the default Vim startup message.
 set shortmess+=I
-
-" Show line numbers.
 set number
-
-" This enables relative line numbering mode. With both number and
-" relativenumber enabled, the current line shows the true line number, while
-" all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
 set relativenumber
-
-" Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
-
-" The backspace key has slightly unintuitive behavior by default. For example,
-" by default, you can't backspace before the insertion point set with 'i'.
-" This configuration makes backspace behave more reasonably, in that you can
-" backspace over anything.
 set backspace=indent,eol,start
-
-" By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
-" shown in any window) that has unsaved changes. This is to prevent you from "
-" forgetting about unsaved changes and then quitting e.g. via `:qa!`. We find
-" hidden buffers helpful enough to disable this protection. See `:help hidden`
-" for more information on this.
 set hidden
-
-" This setting makes search case-insensitive when all characters in the string
-" being searched are lowercase. However, the search becomes case-sensitive if
-" it contains any capital letters. This makes searching more convenient.
-set ignorecase
 set smartcase
-
-" Enable searching as you type, rather than waiting till you press enter.
 set incsearch
+set noerrorbells visualbell t_vb=
+set mouse+=a
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set wildmenu
+set wildmode=full
+set hls
+set history=200
+set nrformats-=octal
+set splitbelow
+set splitright
+" set foldmethod=indent
+set foldlevel=99
+set encoding=utf-8
+let g:SimpylFold_docstring_preview=1
+let python_highlight_all=1
 
-" Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
-" Disable audible bell because it's annoying.
-set noerrorbells visualbell t_vb=
-
-" Enable mouse support. You should avoid relying on this too much, but it can
-" sometimes be convenient.
-set mouse+=a
-
-" Try to prevent bad habits like using the arrow keys for movement. This is
-" not the only possible bad habit. For example, holding down the h/j/k/l keys
-" for movement, rather than using more efficient movement commands, is also a
-" bad habit. The former is enforceable through a .vimrc, while we don't know
-" how to prevent the latter.
-" Do this in normal mode...
+" These mapping are used to force me to not use arrows and use vim plugins
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
+
 inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
+let mapleader = "\<Space>"
+
+" Save file with control s
+nnoremap <C-s> :w<CR>
+
 " Wrap commits to 72
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+" Quit vim help with q
+autocmd Filetype help nnoremap <buffer> q :q<CR>
+
 filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
 
 " fugitive commands
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
-" Autocompletion
-set wildmenu
-set wildmode=full
-
-" History
-set history=200
-
-" Search highlighting
-set hls
-
-" Exclude octal formats
-set nrformats-=octal
 
 " Navigation between buffers
 nnoremap <silent> [b :bprevious<CR>
@@ -112,5 +85,36 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
+" Navigate between lines
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+nnoremap 0 g^
+nnoremap $ g$
+nnoremap ^ g0
+
+" Split  navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Expansion of Active File Directory
 cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" Fix the & command
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
+" Color schemes
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme zenburn
+endif
+
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0

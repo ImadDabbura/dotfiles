@@ -14,10 +14,14 @@ Plugin 'dense-analysis/ale'
 Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'scrooloose/nerdtree'
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Plugin 'Valloric/YouCompleteMe'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
@@ -140,3 +144,8 @@ set grepformat=%f:%l:%c:%m
 """"""""""""""
 " nnoremap <f5> :!ctags -R<CR> # use f5 to trigger reindexing codebase
 " autocmd BufWritePost * call system("ctags -R") # reindex everytime we save changes to a file
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }

@@ -22,6 +22,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'psf/black'
 " Plugin 'kien/ctrlp.vim'
 " Plugin 'scrooloose/nerdtree'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -155,3 +156,8 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+" Black configutation
+let g:ale_fixers = {}
+autocmd BufWritePre *.py execute ':Black'
+let g:black_linelength = 79

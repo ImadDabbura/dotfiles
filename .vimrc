@@ -23,10 +23,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'psf/black'
-" Plugin 'kien/ctrlp.vim'
-" Plugin 'scrooloose/nerdtree'
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -87,14 +83,6 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Quit vim help with q
 autocmd Filetype help nnoremap <buffer> q :q<CR>
-
-
-
-" Navigation between buffers
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
 
 " Navigate between lines
 nnoremap k gk

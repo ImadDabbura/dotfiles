@@ -63,17 +63,6 @@ let python_highlight_all=1
 
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
-" These mapping are used to force me to not use arrows and use vim plugins
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
-
 let mapleader = "\<Space>"
 
 " Save file with control s

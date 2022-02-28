@@ -142,3 +142,13 @@ let g:fzf_action = {
 let g:ale_fixers = {}
 autocmd BufWritePre *.py execute ':Black'
 let g:black_linelength = 79
+
+" FZF
+nnoremap <leader>h :History:<CR>
+nnoremap <leader>s :History/<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>c :Commits<CR>
+nnoremap <leader>bc :BCommits<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>gf :GFiles<CR>
+nnoremap <leader>gs :GFiles?<CR>

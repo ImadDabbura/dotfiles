@@ -10,7 +10,7 @@
 
 [merge]
 	conflictstyle = diff3
-	tool = vim
+	tool = nvim
 	ff = only
 
 [user]
@@ -43,7 +43,7 @@
 	untracked = cyan
 
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	pager = diff-so-fancy | less --tabs=4 -RFX

@@ -7,15 +7,12 @@ call vundle#begin()
 
 Plugin 'joshdick/onedark.vim'
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'dense-analysis/ale'
-Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-airline/vim-airline'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
@@ -26,8 +23,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'psf/black'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -152,3 +149,23 @@ nnoremap <leader>bc :BCommits<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>gf :GFiles<CR>
 nnoremap <leader>gs :GFiles?<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_checkers = ['flake8', 'pylint']
+
+" packadd minpac
+" call minpac#init()
+" call minpac#add('tpope/vim-unimpaired')
+" call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
+
+nnoremap gX :silent :execute "!open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>
+function! CountTILs()
+        execute '%s/^- \[//n'
+    endfunction

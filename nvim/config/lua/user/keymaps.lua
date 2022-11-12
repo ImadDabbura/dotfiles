@@ -40,6 +40,15 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bn<CR>", opts)
 keymap("n", "<S-h>", ":bp<CR>", opts)
 
+-- FZF
+keymap("n", "<leader>h", ":History:<CR>", opts)
+keymap("n", "<leader>s", ":History/<CR>", opts)
+keymap("n", "<leader>b", ":Buffers<CR>", opts)
+keymap("n", "<leader>c", ":Commits<CR>", opts)
+keymap("n", "<leader>bc", ":BCommits<CR>", opts)
+keymap("n", "<leader>f", ":Files<CR>", opts)
+keymap("n", "<leader>gf", ":GFiles<CR>", opts)
+keymap("n", "<leader>gs", ":GFiles?<CR>", opts)
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

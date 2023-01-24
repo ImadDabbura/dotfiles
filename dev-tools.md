@@ -14,3 +14,6 @@ The followings are tools I use and found useful:
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep): Search tool similar to `grep`.
 - [`autojump`](https://github.com/wting/autojump): Faster way to navigate your filesystem.
 - [`lnav`](https://github.com/tstack/lnav): Log file navigator.
+- [`ncdu`](https://github.com/rofl0r/ncdu): NCurses Disk Usage.
+- [`tree`](?): List directories contents in a tree-like format.
+- [`tldr`](https://github.com/tldr-pages/tldr): Nice help pages.

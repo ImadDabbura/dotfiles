@@ -16,4 +16,6 @@ The followings are tools I use and found useful:
 - [`lnav`](https://github.com/tstack/lnav): Log file navigator.
 - [`ncdu`](https://github.com/rofl0r/ncdu): NCurses Disk Usage.
 - [`tree`](?): List directories contents in a tree-like format.
+- [`exa`](https://github.com/ogham/exa): Modern replacement for ls.
+- [`ranger`](https://github.com/ranger/ranger): Visual file manager.
 - [`tldr`](https://github.com/tldr-pages/tldr): Nice help pages.

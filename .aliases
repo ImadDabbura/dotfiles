@@ -4,8 +4,6 @@ alias lt="exa --long --tree"
 alias mux="tmuxinator"
 
 ## Jupyter
-alias jc="jupyter console"
-alias jco="jupyter nbconvert"
 alias jn="jupyter notebook"
 alias jn-b="jupyter notebook --no-browser"
 alias jl="jupyter lab"

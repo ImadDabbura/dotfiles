@@ -7,3 +7,7 @@ alias mux="tmuxinator"
 alias jn="jupyter notebook"
 alias jn-b="jupyter notebook --no-browser"
 alias jl="jupyter lab"
+
+## K8s
+alias kl="kubectl"
+alias mk="minikube"

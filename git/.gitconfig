@@ -70,11 +70,11 @@
 	sla = log --oneline --decorate --graph --all -20
 	slp = log --oneline --decorate
 	slap = log --oneline --decorate --graph --all
-	mup = !git checkout master && git fetch origin && echo && git sl master..origin/master && echo && git pull --quiet && git checkout -
+	mup = !git checkout main && git fetch origin && echo && git sl main..origin/main && echo && git pull --quiet && git checkout -
   	upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
   	riu = !git rebase -i $(git upstream)
-  	rim = !git rebase -i $(git merge-base master HEAD)
-  	rmup = !git mup && git rebase master
+  	rim = !git rebase -i $(git merge-base main HEAD)
+  	rmup = !git mup && git rebase main
   	ureset = !git reset --hard $(git upstream)
 	pl = pull
 	fall = fetch --all

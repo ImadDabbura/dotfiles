@@ -1,4 +1,6 @@
 74th.monokai-charcoal-high-contrast
+akamud.vscode-theme-onedark
+akamud.vscode-theme-onelight
 alefragnani.project-manager
 bierner.github-markdown-preview
 bierner.markdown-checkbox
@@ -12,6 +14,7 @@ bungcip.better-toml
 christian-kohler.path-intellisense
 DavidAnson.vscode-markdownlint
 dracula-theme.theme-dracula
+eamodio.gitlens
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
@@ -25,6 +28,7 @@ mikestead.dotenv
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.black-formatter
+ms-python.flake8
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance

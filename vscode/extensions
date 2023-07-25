@@ -10,7 +10,6 @@ bierner.markdown-mermaid
 bierner.markdown-preview-github-styles
 bierner.markdown-yaml-preamble
 bradgashler.htmltagwrap
-bungcip.better-toml
 christian-kohler.path-intellisense
 DavidAnson.vscode-markdownlint
 dracula-theme.theme-dracula
@@ -45,6 +44,7 @@ quarto.quarto
 redhat.vscode-yaml
 ritwickdey.LiveServer
 streetsidesoftware.code-spell-checker
+tamasfe.even-better-toml
 vscode-icons-team.vscode-icons
 vscodevim.vim
 WakaTime.vscode-wakatime

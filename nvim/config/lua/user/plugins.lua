@@ -33,24 +33,27 @@ end
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+  use "wbthomason/packer.nvim"          -- Have packer manage itself
+  use "nvim-lua/popup.nvim"             -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"           -- Useful lua functions used by lots of plugins
 
   -- colorschemes
-  use 'joshdick/onedark.vim'
-  use 'ryanoasis/vim-devicons'
+  use "joshdick/onedark.vim"
+  use "ryanoasis/vim-devicons"
 
   -- temp plugins
   use "tpope/vim-commentary"
   use "tpope/vim-fugitive"
   use "tpope/vim-surround"
+  use "tpope/vim-rhubarb"               -- Enable fugitie's GBrowse and other Github's completions such as issues, commit messages, collaborators, ...
   use "tpope/vim-repeat"
   use "tpope/vim-unimpaired"
+  use "christoomey/vim-tmux-navigator"
   use "junegunn/fzf"
   use "junegunn/fzf.vim"
   use "psf/black"
 
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

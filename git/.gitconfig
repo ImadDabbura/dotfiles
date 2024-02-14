@@ -13,6 +13,9 @@
 	tool = nvim
 	ff = only
 
+[commit]
+    template = ~/.gitmessage
+
 [user]
 	name = ImadDabbura
 	email = imad.dabbura@hotmail.com

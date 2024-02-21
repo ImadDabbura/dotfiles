@@ -2,11 +2,18 @@
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
 
+[init]
+    defaultBranch = main
+
 [push]
-	default = upstream
+    default = upstream
+    autoSetupRemote = true
 
 [fecth]
 	prune = true
+
+[diff]
+    algorithm = histogram
 
 [merge]
 	conflictstyle = diff3
@@ -15,6 +22,7 @@
 
 [commit]
     template = ~/.gitmessage
+    verbose = true
 
 [user]
 	name = ImadDabbura
@@ -91,8 +99,10 @@
 	ls = ls-files
 	graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
     graph2 = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"
+
 [interactive]
 	diffFilter = diff-so-fancy --patch
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52

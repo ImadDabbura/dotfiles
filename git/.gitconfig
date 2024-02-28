@@ -13,6 +13,7 @@
 	prune = true
 
 [diff]
+    tool = nvimdiffs
     algorithm = histogram
 
 [merge]
@@ -76,7 +77,8 @@
 	uncommit = reset --soft HEAD^1
 	s = status --short --branch
 	codegrep = log -G
-	loggrep = log -E -i --grep
+    loggrep = log -E -i --grep
+    grp = grep -n -p --break --heading
 	sl = log --oneline --decorate -20
 	sla = log --oneline --decorate --graph --all -20
 	slp = log --oneline --decorate

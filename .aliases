@@ -1,7 +1,25 @@
+#!/usr/bin/env zsh
+function alias_if_exists() {
+  # Does the alias only if the aliased program is installed
+    if command -v $2 > /dev/null; then
+        alias "$1"="$2"
+    fi
+}
+
+# Better defaults
+alias ncdu='ncdu --confirm-quit --color dark'
+alias crontab="VIM_CRONTAB=true crontab"
+alias_if_exists 'diff' 'colordiff'
+alias_if_exists 'ag' 'rg'
+alias_if_exists 'vim' 'nvim'
+alias_if_exists 'fdupes' 'jdupes'
+alias_if_exists 'mux' 'tmuxinator'
+
 ## General commands
-alias ls="exa --long"
-alias lt="exa --long --tree"
-alias mux="tmuxinator"
+if command -v exa; then
+    alias ls="exa --long"
+    alias lt="exa --long --tree"
+fi
 
 ## Jupyter
 alias jn="jupyter notebook"
@@ -11,3 +29,13 @@ alias jl="jupyter lab"
 ## K8s
 alias kl="kubectl"
 alias mk="minikube"
+
+## SECRET ALIASES
+if [ -f ~/.secret-aliases ]; then
+    source ~/.secret-aliases
+fi
+
+## LOCAL ALIASES
+if [ -f ~/.local-aliases ]; then
+    source ~/.local-aliases
+fi

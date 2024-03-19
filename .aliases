@@ -12,6 +12,7 @@ alias crontab="VIM_CRONTAB=true crontab"
 alias_if_exists 'diff' 'colordiff'
 alias_if_exists 'ag' 'rg'
 alias_if_exists 'vim' 'nvim'
+alias vi="vim"
 alias_if_exists 'fdupes' 'jdupes'
 alias_if_exists 'mux' 'tmuxinator'
 

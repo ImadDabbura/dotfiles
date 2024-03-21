@@ -66,7 +66,8 @@ return lazy.setup({
         build = ":TSUpdate"
     },
     "folke/zen-mode.nvim",
-    "mbbill/undotree",
+   "vim-scripts/ReplaceWithRegister",  -- Replace text block with register w/o contaminating the register
+   "mbbill/undotree",
     {
       "christoomey/vim-tmux-navigator",
       cmd = {

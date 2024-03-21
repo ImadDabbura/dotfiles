@@ -41,6 +41,12 @@ return lazy.setup({
         lazy = true,
         priority = 1000
     },
+    {
+        "bluz71/vim-nightfly-colors",
+        name = "nightfly",
+        lazy = false,
+        priority = 1000
+    },
    "tpope/vim-commentary",
    "tpope/vim-fugitive",
    "tpope/vim-surround",
@@ -49,26 +55,38 @@ return lazy.setup({
    "tpope/vim-unimpaired",
    "tmux-plugins/vim-tmux",       -- useful for tmux config mainly K and :make to source config
 
-  -- colorschemes
-  use "joshdick/onedark.vim"
-  use "ryanoasis/vim-devicons"
-
-  -- temp plugins
-  use "tpope/vim-commentary"
-  use "tpope/vim-fugitive"
-  use "tpope/vim-surround"
-  use "tpope/vim-rhubarb"               -- Enable fugitie's GBrowse and other Github's completions such as issues, commit messages, collaborators, ...
-  use "tpope/vim-repeat"
-  use "tpope/vim-unimpaired"
-  use "christoomey/vim-tmux-navigator"
-  use "junegunn/fzf"
-  use "junegunn/fzf.vim"
-  use "psf/black"
-
-  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
-end)
+    -- Revisit the following plugins for complete setup/understanding
+   "kshenoy/vim-signature",       -- Toggle & display marks (Revisit)
+    {
+     "folke/trouble.nvim",
+     dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate"
+    },
+    "folke/zen-mode.nvim",
+    "mbbill/undotree",
+    {
+      "christoomey/vim-tmux-navigator",
+      cmd = {
+        "TmuxNavigateLeft",
+        "TmuxNavigateDown",
+        "TmuxNavigateUp",
+        "TmuxNavigateRight",
+        "TmuxNavigatePrevious",
+      },
+      keys = {
+        { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+        { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+        { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+        { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+        { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+      },
+    },
+   "nvim-lua/popup.nvim",             -- An implementation of the Popup API from vim in Neovim
+   "nvim-lua/plenary.nvim",           -- Useful lua functions used by lots of plugins
+   "junegunn/fzf",
+   "junegunn/fzf.vim",
+   "psf/black",
+})

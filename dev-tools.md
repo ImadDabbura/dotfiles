@@ -21,3 +21,4 @@ The followings are tools I use and found useful:
 - [`tldr`](https://github.com/tldr-pages/tldr): Nice help pages.
 - [`stow`](https://www.gnu.org/software/stow/): Symlink manager. Helpful in managing dotfiles.
 - [`jdupes`](https://www.jdupes.com/): Find and perform actions on duplicate files.
+- [`shellcheck`](https://www.shellcheck.net/): Finds bugs in shell scripts.

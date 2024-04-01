@@ -20,3 +20,4 @@ The followings are tools I use and found useful:
 - [`ranger`](https://github.com/ranger/ranger): Visual file manager.
 - [`tldr`](https://github.com/tldr-pages/tldr): Nice help pages.
 - [`stow`](https://www.gnu.org/software/stow/): Symlink manager. Helpful in managing dotfiles.
+- [`shellcheck`](https://www.shellcheck.net/): Finds bugs in shell scripts.

@@ -17,9 +17,9 @@ alias_if_exists 'fdupes' 'jdupes'
 alias_if_exists 'mux' 'tmuxinator'
 
 ## General commands
-if command -v exa; then
-    alias ls="exa --long"
-    alias lt="exa --long --tree"
+if command -v lsd > /dev/null; then
+    alias ls="lsd -l"
+    alias lt="lsd --tree"
 fi
 
 ## Jupyter

@@ -22,3 +22,4 @@ The followings are tools I use and found useful:
 - [`stow`](https://www.gnu.org/software/stow/): Symlink manager. Helpful in managing dotfiles.
 - [`jdupes`](https://www.jdupes.com/): Find and perform actions on duplicate files.
 - [`shellcheck`](https://www.shellcheck.net/): Finds bugs in shell scripts.
+- [`neofetch`](https://github.com/dylanaraps/neofetch): System information.

@@ -1,3 +1,7 @@
+# System info
+if command -v neofetch > /dev/null; then
+    eval "neofetch"
+fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -67,8 +71,3 @@ eval "$(~/miniforge3/bin/conda shell.zsh hook)"
 
 # Autojump
 source /opt/homebrew/opt/autojump/share/autojump/autojump.zsh
-
-# System info
-if command -v neofetch > /dev/null; then
-    eval "neofetch"
-fi

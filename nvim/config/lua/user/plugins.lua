@@ -331,5 +331,8 @@ return lazy.setup({
     {
       "stevearc/dressing.nvim",
       event = "VeryLazy",
+    },
+    {
+      "nvim-lua/plenary.nvim", -- lua functions that many plugins use
     }
 })

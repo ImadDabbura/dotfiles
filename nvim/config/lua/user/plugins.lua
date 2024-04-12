@@ -326,5 +326,10 @@ return lazy.setup({
             keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "Fuzzy find git commits" })
             keymap.set("n", "<leader>gbc", "<cmd>Telescope git_bcommits<cr>", { desc = "Fuzzy find buffer git commits" })
         end,
+    },
+
+    {
+      "stevearc/dressing.nvim",
+      event = "VeryLazy",
     }
 })

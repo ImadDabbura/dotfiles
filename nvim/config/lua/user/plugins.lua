@@ -17,6 +17,13 @@ if not status_ok then
 end
 
 return lazy.setup({
+    ui = {
+        border = "rounded",
+    },
+    change_detection = {
+        enabled = true,
+        notify = false,
+    },
 	-- themes
 	{
 		"joshdick/onedark.vim",
@@ -67,7 +74,7 @@ return lazy.setup({
 	{
 		"bluz71/vim-nightfly-colors",
 		name = "nightfly",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 	},
 
@@ -327,7 +334,6 @@ return lazy.setup({
             keymap.set("n", "<leader>gbc", "<cmd>Telescope git_bcommits<cr>", { desc = "Fuzzy find buffer git commits" })
         end,
     },
-
     {
       "stevearc/dressing.nvim",
       event = "VeryLazy",
@@ -335,6 +341,53 @@ return lazy.setup({
     {
       "nvim-lua/plenary.nvim", -- lua functions that many plugins use
     },
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 500
+        end,
+        config = function()
+            local key = require("which-key")
+
+            key.setup({
+                plugins = {
+                    marks = true,
+                    registers = true,
+                    spelling = {
+                        enabled = true,
+                        suggestions = 20,
+                    },
+                    presets = {
+                        operators = false,
+                        motions = false,
+                        text_objects = false,
+                        windows = false,
+                        nav = false,
+                        z = false,
+                        g = false,
+                    },
+                },
+                window = {
+                    border = "rounded",
+                    position = "bottom",
+                    padding = { 2, 2, 2, 2 },
+                },
+                ignore_missing = true,
+                show_help = false,
+                show_keys = false,
+                disable = {
+                    buftypes = {},
+                    filetypes = { "TelescopePrompt" },
+                },
+                opts = {
+                    mode = "n", -- NORMAL mode
+                    prefix = "<leader>",
+                },
+            })
+        end,
+        },
     {
       "nvim-treesitter/nvim-treesitter",
       event = { "BufReadPre", "BufNewFile" },
@@ -388,5 +441,5 @@ return lazy.setup({
           },
         })
       end,
-    }
+    },
 })

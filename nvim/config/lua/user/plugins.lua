@@ -299,6 +299,7 @@ return lazy.setup({
             "nvim-lua/plenary.nvim",
             { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
             "nvim-tree/nvim-web-devicons",
+            "folke/todo-comments.nvim"
         },
         config = function()
             local telescope = require("telescope")
@@ -332,6 +333,7 @@ return lazy.setup({
             keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { desc = "Fuzzy find git status" })
             keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", { desc = "Fuzzy find git commits" })
             keymap.set("n", "<leader>fgbc", "<cmd>Telescope git_bcommits<cr>", { desc = "Fuzzy find buffer git commits" })
+            keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
         end,
     },
     {
@@ -540,6 +542,35 @@ return lazy.setup({
 
         -- make autopairs and completion work together
         cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+      end,
+    },
+    {
+      "folke/todo-comments.nvim",
+      event = { "BufReadPre", "BufNewFile" },
+      dependencies = { "nvim-lua/plenary.nvim" },
+      config = function()
+        local todo_comments = require("todo-comments")
+
+        -- set keymaps
+        local keymap = vim.keymap -- for conciseness
+
+        keymap.set(
+                "n", "]t",
+                function()
+                    todo_comments.jump_next()
+                end,
+                { desc = "Next todo comment" }
+            )
+
+        keymap.set(
+                "n", "[t",
+                function()
+                    todo_comments.jump_prev()
+                end,
+                { desc = "Previous todo comment" }
+            )
+
+        todo_comments.setup()
       end,
     },
 })

@@ -1,4 +1,4 @@
 return {
-    "joshdick/onedark.vim",
-    lazy = true,
+	"joshdick/onedark.vim",
+	lazy = true,
 }

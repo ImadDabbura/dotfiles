@@ -16,16 +16,15 @@ if not status_ok then
 	return
 end
 
---return lazy.setup({ { import = "josean.plugins" }, { import = "josean.plugins.lsp" } }, {
-return lazy.setup({ { import = "user.plugins" } }, {
-    ui = {
-        border = "rounded",
-    },
-    checker = {
-        enabled = true,
-        notify = false,
-    },
-    change_detection = {
-        notify = false,
-    },
+return lazy.setup({ { import = "user.plugins" }, { import = "user.plugins.lsp" } }, {
+	ui = {
+		border = "rounded",
+	},
+	checker = {
+		enabled = true,
+		notify = false,
+	},
+	change_detection = {
+		notify = false,
+	},
 })

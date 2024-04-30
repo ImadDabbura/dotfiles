@@ -1,6 +1,4 @@
--- not recursive and don't show output
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -10,6 +8,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- not recursive and don't show output
 -- window management
 keymap("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
 keymap("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
@@ -29,9 +28,6 @@ keymap("n", "0", "g^", opts)
 keymap("n", "$", "g$", opts)
 keymap("n", "^", "g0", opts)
 
-keymap("n", "<C-s>", ":w<CR>", opts)
-
--- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -39,7 +35,9 @@ keymap("v", ">", ">gv", opts)
 -- Avoids yanking visual block after pasting
 keymap("v", "p", '"_dP', opts)
 
--- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":m '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":m '<-2<CR>gv-gv", opts)
+keymap("x", "J", ":m '>+1<CR>gv", opts)
+keymap("x", "K", ":m '<-2<CR>gv", opts)
+
+-- Write changes to file
+keymap("n", "<C-s>", ":w<CR>", opts)

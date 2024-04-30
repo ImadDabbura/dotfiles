@@ -31,8 +31,6 @@ keymap("n", "^", "g0", opts)
 
 keymap("n", "<C-s>", ":w<CR>", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

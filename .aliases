@@ -16,6 +16,7 @@ alias vi="vim"
 alias_if_exists 'fdupes' 'jdupes'
 alias_if_exists 'mux' 'tmuxinator'
 alias qr='quarto render'
+alias qp='quarto preview'
 
 ## General commands
 if command -v lsd > /dev/null; then

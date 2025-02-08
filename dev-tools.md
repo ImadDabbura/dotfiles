@@ -24,3 +24,4 @@ The followings are tools I use and found useful:
 - [`shellcheck`](https://www.shellcheck.net/): Finds bugs in shell scripts.
 - [`neofetch`](https://github.com/dylanaraps/neofetch): System information.
 - [`lazygit`](https://github.com/jesseduffield/lazygit): Lazy Git.
+- [`tig`](https://jonas.github.io/tig/): Tig is an ncurses-based text-mode interface for git.

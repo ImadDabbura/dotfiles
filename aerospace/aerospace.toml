@@ -93,6 +93,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-f = 'workspace F' # for finder
     alt-m = 'workspace M' # for message
     alt-n = 'workspace N' # for note-app (Obsidian)
+    alt-s = 'workspace S' # for Slack
     alt-t = 'workspace T' # for terminal
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -108,6 +109,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-b = 'move-node-to-workspace B'
     alt-shift-m = 'move-node-to-workspace M'
     alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
     #
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -166,3 +168,7 @@ run = "move-node-to-workspace M"
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace F"
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = "move-node-to-workspace S"

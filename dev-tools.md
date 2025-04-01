@@ -26,3 +26,5 @@ The followings are tools I use and found useful:
 - [`lazygit`](https://github.com/jesseduffield/lazygit): Lazy Git.
 - [`tig`](https://jonas.github.io/tig/): Tig is an ncurses-based text-mode interface for git.
 - ['atuin'](https://atuin.sh/): Sync, search, and backup shell history.
+- [`magick`](https://imagemagick.org/index.php): Software suite for editing and
+  manipulating digital images.

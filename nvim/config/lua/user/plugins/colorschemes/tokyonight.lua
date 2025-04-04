@@ -1,6 +1,7 @@
 return {
 	"folke/tokyonight.nvim",
-	priority = 1000, -- make sure to load this before all the other start plugins
+    lazy = true,
+	-- priority = 1000, -- make sure to load this before all the other start plugins
 	config = function()
 		local bg = "#011628"
 		local bg_dark = "#011423"
@@ -32,6 +33,6 @@ return {
 				colors.fg_sidebar = fg_dark
 			end,
 		})
-		vim.cmd([[colorscheme tokyonight]])
+		-- vim.cmd([[colorscheme tokyonight]])
 	end,
 }

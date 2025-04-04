@@ -28,7 +28,7 @@ return {
 				"lua_ls",
 				"jsonls",
 				"markdown_oxide",
-				-- "pyright",
+				"pyright",
 				"ruff",
 				"sqlls",
 				"svlangserver",

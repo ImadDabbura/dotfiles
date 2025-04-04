@@ -16,8 +16,12 @@ if not status_ok then
 	return
 end
 
-return lazy.setup({ { import = "user.plugins" }, { import = "user.plugins.lsp" } }, {
-	ui = {
+return lazy.setup({
+    { import = "user.plugins" },
+    { import = "user.plugins.colorschemes" },
+    { import = "user.plugins.lsp" },
+    }, {
+        ui = {
 		border = "rounded",
 	},
 	checker = {

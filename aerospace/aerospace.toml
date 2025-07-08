@@ -95,6 +95,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-n = 'workspace N' # for note-app (Obsidian)
     alt-s = 'workspace S' # for Slack
     alt-t = 'workspace T' # for terminal
+    alt-z = 'workspace Z' # for Zotero
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -111,6 +112,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-n = 'move-node-to-workspace N'
     alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
+    alt-shift-z = 'move-node-to-workspace Z'
     #
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -172,3 +174,7 @@ run = "move-node-to-workspace F"
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = "move-node-to-workspace S"
+
+[[on-window-detected]]
+if.app-id = 'org.zotero.zotero'
+run = "move-node-to-workspace Z"

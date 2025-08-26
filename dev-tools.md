@@ -12,7 +12,7 @@ The followings are tools I use and found useful:
 - [`atool`](https://linux.die.net/man/1/atool): Managing file archives.
 - [`jless`](https://jless.io/user-guide.html): Reading JSON from STDIN.
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep): Search tool similar to `grep`.
-- [`autojump`](https://github.com/wting/autojump): Faster way to navigate your filesystem.
+- [`zoxide`](https://github.com/rupa/z): Faster way to navigate your filesystem.
 - [`lnav`](https://github.com/tstack/lnav): Log file navigator.
 - [`ncdu`](https://github.com/rofl0r/ncdu): NCurses Disk Usage.
 - [`tree`](?): List directories contents in a tree-like format.
@@ -25,6 +25,6 @@ The followings are tools I use and found useful:
 - [`neofetch`](https://github.com/dylanaraps/neofetch): System information.
 - [`lazygit`](https://github.com/jesseduffield/lazygit): Lazy Git.
 - [`tig`](https://jonas.github.io/tig/): Tig is an ncurses-based text-mode interface for git.
-- ['atuin'](https://atuin.sh/): Sync, search, and backup shell history.
+- [`atuin`](https://atuin.sh/): Sync, search, and backup shell history.
 - [`magick`](https://imagemagick.org/index.php): Software suite for editing and
   manipulating digital images.

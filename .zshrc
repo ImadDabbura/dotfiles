@@ -66,11 +66,10 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window up:3:hidden:wrap\
   --color header:italic\
   --header 'Press CTRL-Y to copy command into clipboard'"
 
-# Autojump
-source /opt/homebrew/opt/autojump/share/autojump/autojump.zsh
-
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+
+eval "$(zoxide init zsh)"

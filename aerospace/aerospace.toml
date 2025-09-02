@@ -90,7 +90,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
     alt-b = 'workspace B' # for browser
-    alt-f = 'workspace F' # for finder
     alt-m = 'workspace M' # for message
     alt-n = 'workspace N' # for note-app (Obsidian)
     alt-s = 'workspace S' # for Slack
@@ -191,8 +190,8 @@ run = ['layout floating', 'move-node-to-workspace M']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
-run = 'layout floating'
+run = ['layout floating', 'move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
-run = ['layout floating', 'move-node-to-workspace F']
+run = ['layout floating', 'move-node-to-workspace 1']

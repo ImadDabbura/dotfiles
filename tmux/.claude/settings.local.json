@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tmux list-keys:*)",
+      "Read(/Users/imad/.tmux/plugins/tmux-fingers/**)",
+      "Bash(~/.tmux/plugins/tmux-fingers/bin/tmux-fingers:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

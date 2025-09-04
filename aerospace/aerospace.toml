@@ -89,7 +89,9 @@ automatically-unhide-macos-hidden-apps = false
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-b = 'workspace B' # for browser
+    alt-a = 'workspace A' # for Brave browser
+    alt-b = 'workspace B' # for Brave browser
+    alt-c = 'workspace C' # for VSCode
     alt-m = 'workspace M' # for message
     alt-n = 'workspace N' # for note-app (Obsidian)
     alt-s = 'workspace S' # for Slack
@@ -106,15 +108,18 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
+    alt-shift-a = 'move-node-to-workspace A'
     alt-shift-b = 'move-node-to-workspace B'
+    alt-shift-c = 'move-node-to-workspace C'
     alt-shift-m = 'move-node-to-workspace M'
     alt-shift-n = 'move-node-to-workspace N'
     alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
     alt-shift-z = 'move-node-to-workspace Z'
-    #
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
     alt-rightSquareBracket = 'workspace --wrap-around next'
@@ -156,13 +161,13 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = "move-node-to-workspace B"
+run = "move-node-to-workspace A"
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser'
 run = 'move-node-to-workspace B'
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run = 'move-node-to-workspace B'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
@@ -195,3 +200,11 @@ run = ['layout floating', 'move-node-to-workspace 1']
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['layout floating', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = ['move-node-to-workspace C']
+
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92' # Cursor
+run = ['move-node-to-workspace C']

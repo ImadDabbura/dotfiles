@@ -17,7 +17,7 @@ The followings are tools I use and found useful:
 - [`ncdu`](https://github.com/rofl0r/ncdu): NCurses Disk Usage.
 - [`tree`](?): List directories contents in a tree-like format.
 - [`lsd`](https://github.com/lsd-rs/lsd): Modern replacement for ls.
-- [`ranger`](https://github.com/ranger/ranger): Visual file manager.
+- [`yazi`](https://github.com/sxyazi/yazi): Visual file manager.
 - [`tldr`](https://github.com/tldr-pages/tldr): Nice help pages.
 - [`stow`](https://www.gnu.org/software/stow/): Symlink manager. Helpful in managing dotfiles.
 - [`jdupes`](https://www.jdupes.com/): Find and perform actions on duplicate files.
@@ -26,5 +26,4 @@ The followings are tools I use and found useful:
 - [`lazygit`](https://github.com/jesseduffield/lazygit): Lazy Git.
 - [`tig`](https://jonas.github.io/tig/): Tig is an ncurses-based text-mode interface for git.
 - [`atuin`](https://atuin.sh/): Sync, search, and backup shell history.
-- [`magick`](https://imagemagick.org/index.php): Software suite for editing and
-  manipulating digital images.
+- [`magick`](https://imagemagick.org/index.php): Software suite for editing and manipulating digital images.

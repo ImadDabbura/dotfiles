@@ -16,7 +16,7 @@ The followings are tools I use and found useful:
 - [`lnav`](https://github.com/tstack/lnav): Log file navigator.
 - [`ncdu`](https://github.com/rofl0r/ncdu): NCurses Disk Usage.
 - [`tree`](?): List directories contents in a tree-like format.
-- [`lsd`](https://github.com/lsd-rs/lsd): Modern replacement for ls.
+- [`eza`](https://github.com/eza-community/eza): Modern replacement for ls.
 - [`yazi`](https://github.com/sxyazi/yazi): Visual file manager.
 - [`tldr`](https://github.com/tldr-pages/tldr): Nice help pages.
 - [`stow`](https://www.gnu.org/software/stow/): Symlink manager. Helpful in managing dotfiles.

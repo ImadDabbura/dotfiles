@@ -30,8 +30,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 command -v fzf >/dev/null && export FZF_DEFAULT_COMMAND='fd --hidden --follow --strip-cwd-prefix --exclude .git'
 command -v fzf >/dev/null && export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 command -v fzf >/dev/null && export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :200 {}'"
-command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
-command -v atuin  >/dev/null && eval "$(atuin init zsh)"
 
 # ---------- direnv (auto-load per-project envs) ----------
 command -v direnv >/dev/null && eval "$(direnv hook zsh)"

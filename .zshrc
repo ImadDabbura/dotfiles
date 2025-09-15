@@ -28,6 +28,8 @@ source "$ZSH/oh-my-zsh.sh"
 
 source /opt/homebrew/opt/fzf/shell/completion.zsh
 source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
 
 # ----- GNU make first
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"

@@ -1,5 +1,8 @@
 theme = tokyonight
-font-size = 16
+font-size = 20
+mouse-hide-while-typing = true
+window-decoration = true
+background-blur-radius = 20
 keybind = cmd+right=text:\x05
 keybind = cmd+left=text:\x01
 keybind = alt+left=esc:b
@@ -7,3 +10,7 @@ keybind = alt+right=esc:f
 keybind = cmd+delete=text:\x0b
 keybind = cmd+backspace=text:\x15
 keybind = opt+delete=esc:d
+keybind = cmd+shift+h=goto_split:left
+keybind = cmd+shift+l=goto_split:right
+keybind = cmd+shift+k=goto_split:up
+keybind = cmd+shift+j=goto_split:down

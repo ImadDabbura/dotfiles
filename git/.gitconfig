@@ -9,17 +9,30 @@
     default = upstream
     autoSetupRemote = true
 
-[fecth]
+[fetch]
 	prune = true
+    pruneTags = true
+
+[pull]
+    ff = only
 
 [diff]
-    tool = nvimdiffs
+    tool = nvimdiff
     algorithm = histogram
+    colorMoved = default
+
+[difftool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$REMOTE" -c 'wincmd w' -c 'wincmd J'
 
 [merge]
 	conflictstyle = diff3
 	tool = nvim
-	ff = only
+    ff = only
+
+[mergetool "nvim"]
+    cmd = nvim -f -c 'Gdiffsplit!' "$MERGED"
+    keepBackup = false
+    trustExitCode = true
 
 [commit]
     template = ~/.gitmessage

@@ -22,6 +22,7 @@ alias qp='quarto preview'
 alias jn="jupyter notebook"
 alias jn-b="jupyter notebook --no-browser"
 alias jl="jupyter lab"
+alias jl-b="jupyter lab --no-browser"
 
 ## K8s
 alias kl="kubectl"

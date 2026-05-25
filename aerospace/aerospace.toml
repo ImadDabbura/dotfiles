@@ -187,6 +187,10 @@ if.app-id = 'com.apple.MobileSMS'
 run = "move-node-to-workspace M"
 
 [[on-window-detected]]
+if.app-id = 'com.automattic.beeper.desktop'
+run = "move-node-to-workspace M"
+
+[[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = "move-node-to-workspace S"
 
